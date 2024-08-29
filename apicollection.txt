@@ -1,0 +1,64 @@
+
+
+POST
+URL-http://173.249.48.94:8086/api/Auth/Login
+
+Body- {
+    "EmployeeID": 2607,
+    "Password": "Password"
+}
+
+
+
+POST
+URL-/api/DVR/CreateDVR
+token- yes
+
+body-{
+    "visit": {
+        "employeeId": 2607,
+        "repMgrId": 1,
+        "repMgrDesignation": 1
+    },
+    "dailyVisitLine": {
+        "customerId": 11,
+        "customerName": "sunny",
+        "toTime": "10:00 AM",
+        "fromTime": "10:00 AM",
+        "fromPlace": "delhi",
+        "toPlace": "delhi",
+        "nextVisitDate": "2024-08-12T08:51:40.832Z",
+        "lat": "11",
+        "long": "11",
+        "distanceTravelled": 10,
+        "contactName": "sunny",
+        "contactPhone": "9690941335",
+        "visitPurpose": 1,
+        "visitSector": 1,
+        "product": 1,
+        "visitDetails": "test",
+        "expectedOrderValue": 100,
+        "localOrOutStation": "local",
+        "toll": 10,
+        "parking": 10,
+        "reimbFile": "testing",
+        "customerType": "once"
+    }
+}
+
+
+GET
+url-/api/DVR/ViewDVR?id={employeeId}
+token-yes
+
+
+GET
+url-/api/DVR/EditDVR?VisitNumber={visitnumber}
+token-yes
+
+
+GET
+url-/api/Masters/GetMaster?type={type} //type =VisitSector, VisitPurpose, CustomerType
+token- not needed
+
+
